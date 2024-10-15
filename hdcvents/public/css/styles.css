@@ -1,0 +1,59 @@
+/*General*/
+* {
+    font-family:'Roboto';
+}
+body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.row{
+    margin: 0;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.btn-primary{
+    background-color: #f2a340;
+    border: 2px solid #c28008;
+}
+
+.btn-primary:hover{
+    background-color: #c28008;
+    border: #c28008;
+}
+
+/*navbar*/
+#navbar img{
+    width: 40px;
+}
+
+#navbar{
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 0;
+}
+#navbar a{
+    font-size: 14px;
+    color: #757575;
+}
+
+#navbar a:hover{
+    color: #f2a340;
+}
+/*Search Container*/
+#search-container{
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;  
+    padding: 50px;
+    text-align: center;
+}
