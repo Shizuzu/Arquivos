@@ -40,6 +40,7 @@ header{
     background-color: #fff;
     padding: 5px 0;
 }
+
 #navbar a{
     font-size: 14px;
     color: #757575;
@@ -48,6 +49,7 @@ header{
 #navbar a:hover{
     color: #f2a340;
 }
+
 /*Search Container*/
 #search-container{
     background-image: url("../img/banner.jpg");
@@ -56,4 +58,99 @@ header{
     height: 400px;  
     padding: 50px;
     text-align: center;
+}
+#sea
+rch-container h1{
+    color: #f2a340;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form{
+    width: 50%;
+    margin: 0 auto;
+ }
+
+ /*Events list*/
+ #events-container {
+    padding: 50px;
+ }
+
+ #events-container h2{
+    margin-bottom: 10px;
+ }
+
+ #events-container .subtitle{
+    color: #757575;
+    margin-bottom: 30px;
+ }
+
+ #cards-container {
+    display: flex;
+ }
+
+ #cards-container .card{
+    flex: 1 1 0;
+    max-width: 20%;
+    border-radius: 13px;
+    padding: 0;
+    margin: 5px;
+ }
+
+#events-container img{
+    max-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.card .car-date{
+    font-size: 12px;
+    color:#ccc
+}
+
+.card .car-title{
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card-participantes{
+    font: size 14px;
+    color: #757575;
+} 
+
+/*Event create page*/
+
+#event-create-container{
+    padding: 30px;
+    padding: 5px 0;
+}
+
+#event-create-container label{
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+#event-create-container input{
+    padding: 5px 2;
+}
+#event-create-container select
+#event-create-container textarea{
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+/*Footer*/
+footer{
+    text-align:center;
+    background-color: #353e48;
+    color: #fff;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    margin-bottom: 0;
 }
