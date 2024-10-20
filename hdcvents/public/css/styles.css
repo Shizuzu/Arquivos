@@ -186,6 +186,15 @@ rch-container h1{
     margin: 20px 0;
 }
 
+/*Items List*/
+#items-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li{
+    display: flex;
+}
 /*Footer*/
 footer{
     text-align:center;
