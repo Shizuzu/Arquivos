@@ -11,8 +11,13 @@
         </form>
     </div>
     <div id="events-container" class="col-md-12">
-        <h2>Próximos Eventos</h2>
-        <p class="subtitle">Veja os eventos dos próximos dias</p>
+        @if ($search)
+            <h2>Buscando por: {{$search}}</h2>
+            {{--<p class="subtitle">Veja os eventos dos próximos dias de: {{$search}}</p>--}}
+        @else  
+            <h2>Próximos Eventos</h2> 
+            <p class="subtitle">Veja os eventos dos próximos dias</p>
+        @endif
         <div id="cards-container" class="row">
             @foreach ($events as $event)
                 <div class="card col-md-3">
@@ -25,8 +30,10 @@
                     </div>
                 </div>
             @endforeach
-            @if (count($events) == 0)
-                <p>Não há eventos disponíveis</p>   
+            @if (count($events) == 0 && $search)
+                <p>Não foi possível encontrar nenhum evento com {{ $search }}! <a href="/">Ver todos!</a></p>   
+            @elseif(count($events) == 0)
+                <p>Não há eventos disponíveis</p>
             @endif
         </div>
     </div>
