@@ -52,7 +52,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    /**
+     /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -64,4 +64,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function events() {
+        return $this->hasMany('App\Models\Event');
+    }
+
 }
