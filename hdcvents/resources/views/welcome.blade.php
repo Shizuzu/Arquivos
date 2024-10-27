@@ -12,8 +12,7 @@
     </div>
     <div id="events-container" class="col-md-12">
         @if ($search)
-            <h2>Buscando por: {{$search}}</h2>
-            {{--<p class="subtitle">Veja os eventos dos próximos dias de: {{$search}}</p>--}}
+            <h2>Buscando por: {{$search}}</h2> {{--<p class="subtitle">Veja os eventos dos próximos dias de: {{$search}}</p>--}}
         @else  
             <h2>Próximos Eventos</h2> 
             <p class="subtitle">Veja os eventos dos próximos dias</p>
@@ -23,9 +22,9 @@
                 <div class="card col-md-3">
                     <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
                     <div class="card-body">
-                        <p class="card-date">{{ date('m/d/Y', strtotime($event->date)) }}</p> {{--Aqui posso alterar o formado da data ('d/m/Y') JP--}}
+                        <p class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</p> {{--Aqui posso alterar o formado da data ('d/m/Y') JP--}}
                         <h5 class="card-title">{{ $event->title }} </h5>
-                        <p class="card-partipants"> X Participantes</p>
+                        <p class="card-partipants"> {{ count($event->users) }} Participantes</p>
                         <a href="/events/{{ $event->id }}" class="btn btn-primary"> Saber mais</a>
                     </div>
                 </div>
