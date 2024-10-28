@@ -40,7 +40,7 @@
             <p>Você ainda não tem eventos, <a href="/events/create">Criar Evento</a></p>
         @endif
          <div class="col-md-10 offset-md-1 dashboard-title-container">
-            <h1>Eventos que estou participando</h1>
+        <h1>Eventos que estou participando</h1>
         </div>
         <div class="col-md-10 offset-md-1 dashboard-title-container">
             @if(count($eventsasparticipant) > 0)
@@ -51,7 +51,7 @@
                             <th scope="col">Nome</th>
                             <th scope="col">Participantes</th>
                             <th scope="col">Ações</th>
-                    </tr>
+                        </tr>
                     </thead>
                 <tbody>
                     @foreach($eventsasparticipant as $event)
@@ -60,7 +60,14 @@
                             <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                             <td>{{count($event->users)}}</td>
                             <td>
-                                <a href="#"> Sair do Evento</a>
+                                <form action="/events/leave/{{ $event->id}}" method="POST">
+                                    @csrf
+                                    @method("DELETE")
+                                    <button type="submit" class="btn btn-danger delete-btn">
+                                        <ion-icon name="trash-outline"></ion-icon>
+                                        Sair do Evento
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

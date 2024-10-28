@@ -22,7 +22,7 @@
                 <div class="card col-md-3">
                     <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
                     <div class="card-body">
-                        <p class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</p> {{--Aqui posso alterar o formado da data ('d/m/Y') JP--}}
+                        <p class="card-date">{{ date('m/d/Y', strtotime($event->date)) }}</p> {{--Aqui posso alterar o formado da data ('d/m/Y') JP--}}
                         <h5 class="card-title">{{ $event->title }} </h5>
                         <p class="card-partipants"> {{ count($event->users) }} Participantes</p>
                         <a href="/events/{{ $event->id }}" class="btn btn-primary"> Saber mais</a>
